@@ -1,0 +1,151 @@
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: container-tools
+  stream: rhel8
+  profiles:
+    stable: [common]
+...
+---
+document: modulemd
+version: 2
+data:
+  name: container-tools
+  stream: rhel8
+  version: 8030020200924150603
+  context: 2a301c24
+  arch: x86_64
+  summary: Common tools and dependencies for container runtimes
+  description: >-
+    Contains SELinux policies, binaries and other dependencies for use with container runtimes
+  dependencies:
+    - buildrequires:
+        platform: [el8]
+      requires:
+        platform: [el8]
+  license:
+    module:
+    - MIT
+    content:
+    - MIT Licence 
+  profiles:
+    common:
+      rpms:
+      - buildah
+      - buildah-tests
+      - cockpit-podman
+      - conmon
+      - container-selinux
+      - containernetworking-plugins
+      - containers-common
+      - crit
+      - criu
+      - crun
+      - fuse-overlayfs
+      - libslirp
+      - libslirp-devel
+      - oci-seccomp-bpf-hook
+      - podman
+      - podman-catatonit
+      - podman-docker
+      - podman-remote
+      - podman-tests
+      - python-podman-api
+      - python3-criu
+      - skopeo
+      - skopeo-tests
+      - slirp4netns
+      - toolbox
+      - udica
+  api:
+    rpms:
+    - buildah
+    - buildah-tests
+    - cockpit-podman
+    - conmon
+    - container-selinux
+    - containernetworking-plugins
+    - containers-common
+    - crit
+    - criu
+    - crun
+    - fuse-overlayfs
+    - libslirp
+    - libslirp-devel
+    - oci-seccomp-bpf-hook
+    - podman
+    - podman-catatonit
+    - podman-docker
+    - podman-remote
+    - podman-tests
+    - python-podman-api
+    - python3-criu
+    - skopeo
+    - skopeo-tests
+    - slirp4netns
+    - toolbox
+    - udica
+  components:
+    rpms:
+      buildah:
+        rationale: Present in the repository
+      cockpit-podman:
+        rationale: Present in the repository
+      conmon:
+        rationale: Present in the repository
+      container-selinux:
+        rationale: Present in the repository
+      containernetworking-plugins:
+        rationale: Present in the repository
+      criu:
+        rationale: Present in the repository
+      crun:
+        rationale: Present in the repository
+      fuse-overlayfs:
+        rationale: Present in the repository
+      libslirp:
+        rationale: Present in the repository
+      oci-seccomp-bpf-hook:
+        rationale: Present in the repository
+      podman:
+        rationale: Present in the repository
+      python-podman-api:
+        rationale: Present in the repository
+      skopeo:
+        rationale: Present in the repository
+      slirp4netns:
+        rationale: Present in the repository
+      toolbox:
+        rationale: Present in the repository
+      udica:
+        rationale: Present in the repository
+  artifacts:
+    rpms:
+    - buildah-0:1.15.1-2.module_el8.3.0+475+c50ce30b.x86_64
+    - buildah-tests-0:1.15.1-2.module_el8.3.0+475+c50ce30b.x86_64
+    - cockpit-podman-0:18.1-2.module_el8.3.0+475+c50ce30b.noarch
+    - conmon-2:2.0.20-2.module_el8.3.0+475+c50ce30b.x86_64
+    - container-selinux-2:2.144.0-1.module_el8.3.0+475+c50ce30b.noarch
+    - containernetworking-plugins-0:0.8.6-2.module_el8.3.0+475+c50ce30b.x86_64
+    - containers-common-1:1.1.1-3.module_el8.3.0+475+c50ce30b.x86_64
+    - crit-0:3.14-2.module_el8.3.0+475+c50ce30b.x86_64
+    - criu-0:3.14-2.module_el8.3.0+475+c50ce30b.x86_64
+    - crun-0:0.14.1-2.module_el8.3.0+475+c50ce30b.x86_64
+    - fuse-overlayfs-0:1.1.2-3.module_el8.3.0+507+aa0970ae.x86_64
+    - libslirp-0:4.3.1-1.module_el8.3.0+475+c50ce30b.x86_64
+    - libslirp-devel-0:4.3.1-1.module_el8.3.0+475+c50ce30b.x86_64
+    - oci-seccomp-bpf-hook-0:1.1.2-3.module_el8.3.0+475+c50ce30b.x86_64
+    - podman-0:2.0.5-5.module_el8.3.0+512+b3b58dca.x86_64
+    - podman-catatonit-0:2.0.5-5.module_el8.3.0+512+b3b58dca.x86_64
+    - podman-docker-0:2.0.5-5.module_el8.3.0+512+b3b58dca.noarch
+    - podman-remote-0:2.0.5-5.module_el8.3.0+512+b3b58dca.x86_64
+    - podman-tests-0:2.0.5-5.module_el8.3.0+512+b3b58dca.x86_64
+    - python-podman-api-0:1.2.0-0.2.gitd0a45fe.module_el8.3.0+475+c50ce30b.noarch
+    - python3-criu-0:3.14-2.module_el8.3.0+475+c50ce30b.x86_64
+    - skopeo-1:1.1.1-3.module_el8.3.0+475+c50ce30b.x86_64
+    - skopeo-tests-1:1.1.1-3.module_el8.3.0+475+c50ce30b.x86_64
+    - slirp4netns-0:1.1.4-2.module_el8.3.0+475+c50ce30b.x86_64
+    - toolbox-0:0.0.8-1.module_el8.3.0+475+c50ce30b.noarch
+    - udica-0:0.2.2-1.module_el8.3.0+475+c50ce30b.noarch
+...

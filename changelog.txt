@@ -1,0 +1,179 @@
+2015-06-01 - Workstation /etc/rc.d/rc.local executable, repos and
+server-side config fixed to require manual installs for elinks & lftp.
+
+2015-06-15 - Beta, release candidate
+ Server v0.9.1
+   Enable open-vm-tools without requiring reboot.
+   Do not use external DHCP-supplied DNS entries.
+   Open firewall for HTTP and FTP to External networks.
+   Includes 2015-06-09 updates from RHEL v7.1 for yum, firefox, and the kernel.
+ Workstation v0.3.0
+   Revert root password to "P@ssw0rd".
+   Enable Network Manager.
+
+2015-06-16 - First released build for RH124 class!
+ Included OVA templates in a ZIP file for easy access.
+ Server v1.0.0
+   Corrected IPv4 routes to use the detected name of NIC2 rather than 'eth1'.
+ Workstation v1.0.0
+
+2015-06-17 - Improved diagnostic data, and a cosmetic fix.
+ Server v1.0.1
+   Place a copy of the troubleshooting log bundle in the FTP/HTTP directory.
+   Include an sosreport in the troubleshooting log bundle.
+   Display user-reachable URL to log bundle when script completes.
+   Corrected backslash-escaping problem in ASCII art for /etc/issue.
+   
+2015-06-18 - Working on LDAP and Kerberos for more advanced classes
+ Server v1.0.2
+   Development arguments "--noldapconfig" and "--nokerberosconfig" added.
+
+2015-07-02 - Adding NFS, LDAP, and Kerberos support thanks to Aaron_Southerland.
+ Server v1.0.3
+   Opened ports for NFS and Kerberos operations.
+   Change ldapuser to UID 5000.
+   Reduced the number of workstations, guest users, etc from 50 to 11.
+   All-new Kerberos & LDAP configuration sections.
+   Added rngd to keep entropy pool level high.
+ Workstation v1.0.1
+   Use krb5.conf file from server
+   Added rngd to keep entropy pool level high.
+
+2015-07-20 - 
+ Server v1.0.5
+   Added the SELinux man pages package (policycoreutils-devel).  FINALLY!
+   Corrected a bug in the Kerberos setup.
+ Workstation v1.0.2
+   Added the SELinux man pages package (policycoreutils-devel).  FINALLY!
+
+2015-07-21 - 
+ Server v1.0.6
+   Corrected NFS RPC port assignments that were behaving randomly.
+
+2015-09-17 - 
+ Server v1.0.7
+   Kerberos configuration fixes
+   Added Samba configuration
+   Added "Don't Panic" ASCII art from the Hitchhiker's Guide To The Galaxy
+ Workstation v1.0.3
+   Client-side of the Kerberos fixes (/etc/idmap.conf, /etc/krb5.keytab)
+
+2015-09-21 - 
+ Server v1.0.8
+   Kerberos configuration fixes (yes, again)
+   Removal of some old code and comments
+
+2015-09-22 - When does the hurting stop?   https://youtu.be/ITD9GdtvVUE?t=939
+ Server v1.0.9
+   Kerberos configuration typo correction
+
+2016-02-16 - One Big Happy Family
+ This release adds support for CentOS v7.0, but we expect a homogeneous environment
+ (all-RHEL or all-CentOS).  There is no technical obstacle to mixing them, but we
+ are not presently going to make the scripts that flexible.
+ Server v1.1.0
+   Added 'breakme1.sh'
+   Added support for CentOS v7.0-1406
+   Corrected iSCSI target creation
+ Workstation v1.1.0
+   Added ID10T and PEBKAC groups
+   Added support for CentOS v7.0-1406
+
+2016-02-18 - 
+ Server v1.1.1
+   Added ability to download ISO from network/internet sources
+   Upgraded VMware Tools to v10.0.5
+ Workstation v1.1.1
+   Added users to ID10T and PEBKAC groups
+   Install 'sl' package
+
+2016-02-19 - X marks the spot!
+ Server v1.1.2
+   Updated packages provided for both RHEL v7.2 and CentOS v7.2
+   Added files in random places for students to find
+ Workstation v1.1.2
+   Added files in random places for students to find
+
+2016-02-29 - Leap Year Edition
+ Server v1.1.3
+   Corrected typo in hidden file
+   Corrected GPG key path for yum repos
+ Workstation v1.1.3
+   Corrected typo in hidden file
+   Remove CentOS-default repositories
+
+2016-03-07 - Names are important
+ Server v1.1.4
+   Improved handling of DNS resolution for out-of-lab addresses.
+   Specify NTP/Chrony configuration and allow access by in-lab workstations
+   More random hidden files
+ Workstation v1.1.4
+   More random hidden files
+
+2016-04-01 - World Domination
+ Server v1.1.5
+   Included scripts to become a "Linux CLI Classroom" environment.
+ Workstation v1.1.5
+   Added comment to kickstart
+   
+2016-07-15 - RHCE, here we come
+ Server v1.1.6
+   Expanded kerberos setup for stations2-N
+   Create certificate keypairs for student-created web servers on workstations
+   Officially supporting RHEL/CentOS v7.2, and deprecating v7.0.
+   (Note that we never supported v7.1.)
+ Workstation v1.1.6
+   No change since v1.1.5, just incrementing version to match server
+
+2016-07-19
+ Server v1.1.7
+   Added xinetd to installed packages, as it apparently is no longer a default
+   Dropped 'targetd' from iSCSI setup commands
+   Fixed creation of workstation-specific routes
+ Workstation v1.1.7
+   Added xinetd to installed packages
+   
+2016-07-22
+ Server v1.1.8
+   Added 'test.sql' to ~ftp/pub/materials
+   New easter eggs.  :)
+ Workstation v1.1.8
+   No change since v1.1.7
+
+2016-10-27 - One RHIAB to rule them all
+ Server v1.1.9
+   Set SELinux context on /samba
+   Add packages "vim" and "bash-completion"
+   Make 'yum' claim to be Firefox in its user_agent to work with poorly configured proxies and hosts.
+   Changed PXE config to offer both a kickstart and a manual installation option
+ Workstation v1.1.9
+   Add packages "vim" and "bash-completion"
+   Make 'yum' claim to be Firefox in its user_agent to work with poorly configured proxies and hosts.
+   
+2016-12-03
+  Server v1.1.10
+    Creating 'file.tar.gz' with 'elinks.rpm' for students
+  Workstation v1.1.10
+    Adding /usr/local/bin/permissions.sh
+
+2017-01-11
+  Server v1.1.11
+	Replaced the v7.2 'update' tarballs with new v7.3 tarballs for both RHEL and CentOS.
+	Ensure both NFS shares and both CIFS/Samba shares have some contents students can read.
+  Workstation v1.1.11
+	No change since v1.1.10
+
+2020-09-09
+  Server v2.0
+  	Replaced all CentOS 7.x with CentOS 8.2
+	LDAP no longer works. Everything else should work fine. 
+2021-01-12	
+  Server v3.0	
+  	It has been a while since we worked on this, but everything has been
+	updated to CentOS8.2. LDAP still doesn't work and has been removed, I
+	might replace it with IPA one of these days.
+	The name has been changed from RHIAB to LIAB so we don't get in
+	trouble.
+	The biggest update here is that the installation has been completely automated
+	and the need for the 2nd ISO file has been eliminated as we are
+	storing and pulling all files from github. 
